@@ -1,0 +1,19 @@
+{
+  "dict": {
+    "search": "Search",
+    "region": "Region",
+    "temperature": "Temperature",
+    "weather": "Weather",
+    "humidity": "Humidity",
+    "loading": "Loading"
+  },
+  "city": {
+    "name": {
+      "placeholder": "Enter city name"
+    }
+  },
+  "errors": {
+    "unknown": "An error has occurred",
+    "0": "Error connecting to server"
+  }
+}

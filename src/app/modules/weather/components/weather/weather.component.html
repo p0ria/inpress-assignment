@@ -1,0 +1,48 @@
+<header>☁ <span>Weather App</span></header>
+<form class="container" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="search">
+    <input
+      formControlName="cityName"
+      type="text"
+      [placeholder]="'city.name.placeholder' | translate"
+      autofocus
+    />
+    <button type="submit" [disabled]="form.invalid">
+      {{ "dict.search" | translate }}
+    </button>
+  </div>
+
+  <div class="infos">
+    <ng-container *ngIf="filteredWeather$ | async as weather; else empty">
+      <div class="field">
+        <span class="key">{{ "dict.region" | translate }}</span>
+        <span class="value">
+          {{ weather.location.country }} / {{ weather.location.region }}</span
+        >
+      </div>
+      <div class="field">
+        <span class="key">{{ "dict.temperature" | translate }}</span>
+        <span class="value">
+          <span>{{ weather.current.temperature }}<sup>o</sup></span></span
+        >
+      </div>
+      <div class="field">
+        <span class="key">{{ "dict.weather" | translate }}</span>
+        <span class="value">
+          {{ weather.current.weather_descriptions[0] }}
+          <img [src]="weather.current.weather_icons[0]" />
+        </span>
+      </div>
+      <div class="field">
+        <span class="key">{{ "dict.humidity" | translate }}</span>
+        <span class="value">{{ weather.current.humidity }}</span>
+      </div>
+    </ng-container>
+  </div>
+</form>
+
+<ng-template #empty>
+  <ng-container *ngIf="isGetCityWeatherPending$ | async">
+    {{ "dict.loading" | translate }}...
+  </ng-container>
+</ng-template>

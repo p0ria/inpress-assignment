@@ -1,0 +1,5 @@
+<select [formControl]="lang">
+  <option *ngFor="let item of translate.langs" [value]="item">
+    {{ item }}
+  </option>
+</select>

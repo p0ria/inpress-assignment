@@ -1,0 +1,15 @@
+{
+  "dict": {
+    "search": "Suchen",
+    "region": "Region",
+    "temperature": "Temperatur",
+    "weather": "Wetter",
+    "humidity": "Feuchtigkeit",
+    "loading": "Wird geladen"
+  },
+  "city": {
+    "name": {
+      "placeholder": "Geben Sie den Namen der Stadt ein"
+    }
+  }
+}

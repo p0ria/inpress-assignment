@@ -1,0 +1,54 @@
+header {
+  padding: 12px;
+  font-size: 24px;
+}
+
+.container {
+  max-width: 700px;
+  margin: 24px auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  .search {
+    display: flex;
+    gap: 8px;
+
+    input {
+      flex: 1;
+      background: none;
+      border: none;
+      outline: none;
+      border-bottom: 1px solid white;
+      font-size: 24px;
+      color: var(--color-text);
+    }
+  }
+
+  .infos {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .field {
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+
+      .key {
+        flex: 0 0 200px;
+        font-size: 20px;
+        color: var(--color-text-2);
+      }
+
+      .value {
+        font-size: 28px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+    }
+  }
+}
